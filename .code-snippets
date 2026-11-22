@@ -1,0 +1,128 @@
+{
+  "Console log": {
+    "scope": "javascript,javascriptreact",
+    "prefix": "clg",
+    "body": [
+      "console.log($1);"
+    ],
+    "description": "Insere um console.log"
+  },
+  "Function declaration": {
+    "scope": "javascript,javascriptreact",
+    "prefix": "func",
+    "body": [
+      "function ${1:nome}(${2:parametros}) {",
+      "\t$0",
+      "}"
+    ],
+    "description": "Cria uma declaração de função"
+  },
+  "Arrow function": {
+    "scope": "javascript,javascriptreact",
+    "prefix": "afn",
+    "body": [
+      "const ${1:nome} = (${2:parametros}) => {",
+      "\t$0",
+      "};"
+    ],
+    "description": "Cria uma arrow function"
+  },
+  "Async arrow function": {
+    "scope": "javascript,javascriptreact",
+    "prefix": "aafn",
+    "body": [
+      "const ${1:nome} = async (${2:parametros}) => {",
+      "\t$0",
+      "};"
+    ],
+    "description": "Cria uma arrow function assíncrona"
+  },
+  "For loop": {
+    "scope": "javascript,javascriptreact",
+    "prefix": "fori",
+    "body": [
+      "for (let ${1:i} = 0; ${1:i} < ${2:limite}; ${1:i}++) {",
+      "\t$0",
+      "}"
+    ],
+    "description": "Cria um loop for com contador"
+  },
+  "For each": {
+    "scope": "javascript,javascriptreact",
+    "prefix": "foreach",
+    "body": [
+      "${1:itens}.forEach((${2:item}) => {",
+      "\t$0",
+      "});"
+    ],
+    "description": "Percorre um array com forEach"
+  },
+  "Array map": {
+    "scope": "javascript,javascriptreact",
+    "prefix": "map",
+    "body": [
+      "${1:itens}.map((${2:item}) => ${0});"
+    ],
+    "description": "Cria uma transformação com map"
+  },
+  "Array filter": {
+    "scope": "javascript,javascriptreact",
+    "prefix": "filter",
+    "body": [
+      "${1:itens}.filter((${2:item}) => ${0});"
+    ],
+    "description": "Cria um filtro de array"
+  },
+  "Try catch": {
+    "scope": "javascript,javascriptreact",
+    "prefix": "trycatch",
+    "body": [
+      "try {",
+      "\t$1",
+      "} catch (${2:erro}) {",
+      "\tconsole.error(${2:erro});",
+      "\t$0",
+      "}"
+    ],
+    "description": "Cria um bloco try/catch"
+  },
+  "Query selector": {
+    "scope": "javascript,javascriptreact",
+    "prefix": "qs",
+    "body": [
+      "document.querySelector('${1:seletor}');"
+    ],
+    "description": "Seleciona o primeiro elemento do DOM que corresponde ao seletor"
+  },
+  "Add event listener": {
+    "scope": "javascript,javascriptreact",
+    "prefix": "addevent",
+    "body": [
+      "${1:elemento}.addEventListener('${2:evento}', (${3:event}) => {",
+      "\t$0",
+      "});"
+    ],
+    "description": "Adiciona um listener de evento"
+  },
+  "Fetch JSON": {
+    "scope": "javascript,javascriptreact",
+    "prefix": "fetchjson",
+    "body": [
+      "const ${1:buscarDados} = async () => {",
+      "\ttry {",
+      "\t\tconst resposta = await fetch('${2:url}');",
+      "\t\tif (!resposta.ok) {",
+      "\t\t\tthrow new Error(`Erro HTTP: \\${resposta.status}`);",
+      "\t\t}",
+      "\t\tconst dados = await resposta.json();",
+      "\t\t$0",
+      "\t\treturn dados;",
+      "\t} catch (erro) {",
+      "\t\tconsole.error('Falha na requisição:', erro);",
+      "\t\tthrow erro;",
+      "\t}",
+      "};"
+    ],
+    "description": "Faz uma requisição fetch e interpreta a resposta como JSON"
+  }
+}

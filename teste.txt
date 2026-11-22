@@ -1,0 +1,15 @@
+import math
+import math
+import math
+
+
+NOME = "hEITOR"
+NOME = "hEITOR"
+NOME = "hEITOR"
+print(NOME)
+print(NOME)
+print(NOME)
+print(NOME)
+print(NOME)
+
+math.
